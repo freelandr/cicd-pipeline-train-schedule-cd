@@ -37,6 +37,11 @@ pipeline {
             }
         }
         stage('Deploy to prod') {
+            when {
+              anyOf {
+                branch 'master'
+              }
+            }
             steps {
               input 'Can I deploy to prod?'
               milestone(1)
