@@ -13,10 +13,9 @@ pipeline {
               anyOf {
                 branch 'master'
               }
-              steps {
-                echo 'Deploying to staging'
-                
-              }
+            }
+            steps {
+              echo 'Deploying to staging'
             }
         }
     }
